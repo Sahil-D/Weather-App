@@ -1,38 +1,92 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.input-area {
+  display: flex;
+  margin: 18px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-box {
+  width: 25vw;
+  margin-right: 5px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-btn {
+  margin-left: 5px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-search {
+  border: solid 1px black;
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 25vw;
+  font-size: 0.8em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.default {
+  border: solid 1px grey;
+  color: grey;
+}
+.dropdown-input {
+  display: block;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  width: 25vw;
+  font-size: 0.8em;
+  border: solid 1px black;
+}
+
+.dropdown-list ul {
+  z-index: 2;
+  border: 1px solid grey;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: fixed;
+  width: 26vw;
+  max-height: 200px;
+  border-top: none;
+}
+
+.dropdown-list li {
+  background-color: rgba(136, 132, 132, 0.8);
+  list-style: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background: white;
+  font-weight: bold;
+}
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropdown-list li.no-result {
+  color: grey;
+}
+
+.dropdown-list li.no-result:hover {
+  font-weight: normal;
 }
